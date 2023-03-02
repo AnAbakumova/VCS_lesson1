@@ -14,4 +14,26 @@ public class SalesManager {
         }
         return max;
     }
+
+    public int min() {
+        int min = Integer.MAX_VALUE;
+        for (int sale : sales) {
+            if (sale < min) {
+                min = sale;
+            }
+        }
+        return min;
+    }
+
+    public int truncated_mean(){
+        int count = 0;
+        int sum = 0;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] != max() && sales[i] != min()){
+                sum += sales[i];
+                count ++;
+            }
+        }
+        return sum/count;
+    }
 }
