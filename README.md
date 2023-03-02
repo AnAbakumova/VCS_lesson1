@@ -4,13 +4,13 @@
 
 Мы рассматриваем следующий метод:   
 ``` java  
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
         }
         return max;
     }
-```
+```[README.md](README.md)
