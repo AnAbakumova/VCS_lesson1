@@ -28,8 +28,10 @@ public class SalesManager {
     public long truncated_mean() {
         long count = 0;
         long sum = 0;
+        long max = max();
+        long min = min();
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] != max() && sales[i] != min()) {
+            if (sales[i] != max && sales[i] != min) {
                 sum += sales[i];
                 count++;
             }
